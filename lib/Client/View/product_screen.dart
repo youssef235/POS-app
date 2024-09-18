@@ -65,7 +65,10 @@ class ProductsClientScreen extends StatelessWidget {
                     itemCount: state.products.length,
                     itemBuilder: (context, index) {
                       final product = state.products[index];
-                      return ProductCard(product: product);
+
+                      return ProductCard(
+                        product: product,
+                      );
                     },
                   );
                 } else if (state is ProductError) {

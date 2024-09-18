@@ -5,13 +5,10 @@ abstract class AuthState extends Equatable {
   List<Object> get props => [];
 }
 
-// حالة البداية
 class AuthInitial extends AuthState {}
 
-// حالة التحميل
 class AuthLoading extends AuthState {}
 
-// حالة عند تسجيل الدخول
 class AuthAuthenticated extends AuthState {
   final String userId;
 
@@ -21,10 +18,8 @@ class AuthAuthenticated extends AuthState {
   List<Object> get props => [userId];
 }
 
-// حالة عند تسجيل الخروج
 class AuthUnauthenticated extends AuthState {}
 
-// حالة عند حدوث خطأ
 class AuthError extends AuthState {
   final String message;
 

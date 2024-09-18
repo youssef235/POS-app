@@ -69,7 +69,7 @@ class ProductCard extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       foregroundColor: Colors.white,
                       backgroundColor: Colors.green,
-                      padding: EdgeInsets.symmetric(vertical: 8), // تقليل الحشو
+                      padding: EdgeInsets.symmetric(vertical: 8),
                     ),
                   ),
                 ),
@@ -78,8 +78,9 @@ class ProductCard extends StatelessWidget {
                   onPressed: () async {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (BuildContext context) =>
-                            PayPalPaymentScreen(product: product),
+                        builder: (BuildContext context) => PayPalPaymentScreen(
+                          product: product,
+                        ),
                       ),
                     );
                   },
